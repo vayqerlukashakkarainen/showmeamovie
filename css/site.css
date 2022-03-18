@@ -8,6 +8,7 @@ body {
 	width: 100vw;
 	padding: 0;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 p,
@@ -32,12 +33,20 @@ p {
 .mb-1 {
 	margin-bottom: 1rem;
 }
+.overflow-hidden {
+	overflow: hidden;
+}
 
 .color-gold {
 	color: #dbb929;
 }
 .font-bold {
 	font-weight: bold;
+}
+.bottom {
+	font-size: 12px;
+	color: gray;
+	text-align: center;
 }
 
 .background {
@@ -52,6 +61,12 @@ p {
 	background-repeat: no-repeat;
 	background-position: center;
 	z-index: 0;
+}
+
+.particles {
+	height: 200%;
+	position: absolute;
+	z-index: 1;
 }
 
 .powered-by {
@@ -76,6 +91,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	padding: 16vh 0px;
+	animation: bounce-in 1s ease;
+}
+
+.segment-two-container {
+	overflow: hidden;
 }
 
 @media screen and (max-width: 992px) {
@@ -84,7 +104,7 @@ p {
 		padding-bottom: 4rem;
 	}
 	.screenshot-container.right .text {
-		max-width: 60vw;
+		position: relative;
 		padding-left: var(--container-padding);
 	}
 	.screenshot-container.right .device {
@@ -96,12 +116,35 @@ p {
 		left: -32px;
 	}
 	.screenshot-container.left .text {
-		max-width: 60vw;
+		position: relative;
 		padding-right: var(--container-padding);
 	}
-	.screenshot-container .device img {
-		max-width: 240px;
+}
+
+@media screen and (min-width: 992px) {
+	.screenshot-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 4rem;
+		text-align: center;
 	}
+	.screenshot-container .text {
+		max-width: 312px;
+		padding: 2rem 0px;
+	}
+	.segment-two-container {
+		display: flex;
+		justify-content: center;
+	}
+	.segment-two-container * {
+		opacity: 1 !important;
+	}
+}
+
+.screenshot-container .device img {
+	max-width: 240px;
 }
 
 .badge-container {
@@ -110,5 +153,31 @@ p {
 }
 
 .badge-container .badges {
+	padding-top: 3rem;
+	padding-bottom: 50vh;
 	display: flex;
+	justify-content: space-between;
+	max-width: 412px;
+	margin: auto;
+}
+.badge-container .badges img {
+	height: 52px;
+}
+
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+	}
+	30% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(0.9);
+	}
+	70% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
