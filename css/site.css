@@ -92,6 +92,7 @@ p {
 	align-items: center;
 	padding: 16vh 0px;
 	animation: bounce-in 1s ease;
+	-webkit-animation: bounce-in 1s ease;
 }
 
 .segment-two-container {
@@ -179,5 +180,22 @@ p {
 	}
 	100% {
 		transform: scale(1);
+	}
+}
+@-webkit-keyframes bounce-in {
+	0% {
+		-webkit-transform: scale(0);
+	}
+	30% {
+		-webkit-transform: scale(1.2);
+	}
+	50% {
+		-webkit-transform: scale(0.9);
+	}
+	70% {
+		-webkit-transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
 	}
 }
