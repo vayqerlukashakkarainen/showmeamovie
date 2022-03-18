@@ -9,12 +9,70 @@
 			name="viewport"
 			content="initial-scale=1, width=device-width, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
 		<link rel="stylesheet" href="./css/site.css" />
 	</head>
 	<body>
-		<div>
-			<h1>This is a page</h1>
+		<div class="background"></div>
+		<div class="container">
+			<div class="top-hero">
+				<img class="icon" src="./content/icon.png" />
+				<h1 class="mb-1">Show Me a Movie</h1>
+				<p class="p-0 m-0">App with a random film generator</p>
+			</div>
+			<div>
+				<div class="screenshot-container right">
+					<div class="text">
+						<h2>Find it</h2>
+						<p>
+							Quickly find your new
+							<span class="font-bold color-gold">favorite movie or series</span>
+							from an always growing database
+						</p>
+						<p class="powered-by">Powered by tMDB</p>
+					</div>
+					<div class="device">
+						<img src="./content/img1.png" />
+					</div>
+				</div>
+
+				<div class="screenshot-container left">
+					<div class="device">
+						<img src="./content/img2.png" />
+					</div>
+					<div class="text">
+						<h2>Where to <span class="color-gold">watch</span></h2>
+						<p>Directly see where the movie or series can be streamed</p>
+						<p class="powered-by">Powered by JustWatch</p>
+					</div>
+				</div>
+
+				<div class="screenshot-container right">
+					<div class="text">
+						<h2>Add filters</h2>
+						<p>
+							Looking for specific
+							<span class="font-bold color-gold">genre or rating</span>? With
+							filtering you get just what you want
+						</p>
+					</div>
+					<div class="device">
+						<img src="./content/img3.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="badge-container">
+				<h1>Get the app <span class="color-gold">for free</span></h1>
+				<p>Show Me a Movie is available for free on App Store or Google Play</p>
+				<div class="badges"></div>
+			</div>
 		</div>
 	</body>
 	<script src="./js/site.js"></script>
