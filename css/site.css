@@ -63,12 +63,6 @@ p {
 	z-index: 0;
 }
 
-.particles {
-	height: 200%;
-	position: absolute;
-	z-index: 1;
-}
-
 .powered-by {
 	font-style: italic;
 	font-size: 12px;
@@ -93,13 +87,23 @@ p {
 	padding: 16vh 0px;
 	animation: bounce-in 1s ease;
 	-webkit-animation: bounce-in 1s ease;
+	max-width: 312px;
+	text-align: center;
+	margin: auto;
 }
 
 .segment-two-container {
 	overflow: hidden;
 }
 
+.screenshot-container .device img {
+	max-width: 240px;
+}
+
 @media screen and (max-width: 992px) {
+	h2 {
+		font-size: 22px;
+	}
 	.screenshot-container {
 		display: flex;
 		padding-bottom: 4rem;
@@ -119,6 +123,9 @@ p {
 	.screenshot-container.left .text {
 		position: relative;
 		padding-right: var(--container-padding);
+	}
+	.screenshot-container .device img {
+		max-width: 200px;
 	}
 }
 
@@ -142,10 +149,6 @@ p {
 	.segment-two-container * {
 		opacity: 1 !important;
 	}
-}
-
-.screenshot-container .device img {
-	max-width: 240px;
 }
 
 .badge-container {
