@@ -50,6 +50,10 @@ p {
 	text-align: center;
 }
 
+.large-title {
+	font-size: 2em;
+}
+
 .background {
 	position: fixed;
 	left: 0;
